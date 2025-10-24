@@ -1,17 +1,150 @@
 .main-logo {
-    height: 75px;
-    width: 75px;
-    background-color: bisque;
-    border-radius: 50%;
-    background-image: url('../logonurel.png');
-    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-header {
-    display: flex
-;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: white;
+}
+
+.main-header a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--toxic-teal), var(--coral-warning));
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 10px rgba(104, 147, 240, 0.555);
+}
+
+.main-header a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.5);
+  background: linear-gradient(90deg, var(--coral-warning), var(--sun-glow));
+}
+
+main section {
+  background: linear-gradient(180deg, rgba(99, 121, 245, 0.63), rgba(0, 22, 39, 0.95)); /* nuansa laut */
+  border-radius: 12px; 
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); 
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 900px; 
+  color: #e6eef2;
+}
+
+:root {
+  --toxic-teal: #ee52ba;
+  --coral-warning: #ebae76;
+  --sun-glow: #fcff33;
+}
+
+.page-container {
+  max-width: 1400px; 
+  margin: 0 auto;     
+  padding: 0 5px;   
+}
+
+body {
+  background: linear-gradient(-45deg, #cc359a, #feffa5, #9383ec, #ee52ba);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  color: #e25555;
+  transition: background 0.5s ease;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* foto profil */
+.profile-section {
+    display:flex
+    text-align: center; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.foto-bulat {
+    width: 120px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.profile-text {
+    text-align: left;  
+}
+
+.profile-text p {
+margin-bottom: 12px;
+}
+
+.main-form {
+  text-align: left;
+}
+
+.main-form button,
+.main-form input[type="submit"] {
+  background: linear-gradient(90deg, var(--toxic-teal), var(--coral-warning));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 168, 232, 0.3);
+  display: inline-block;
+}
+
+.main-form button:hover,
+.main-form input[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 77, 109, 0.5);
+  background: linear-gradient(90deg, var(--coral-warning), var(--sun-glow));
+}
+
+.main-form input,
+.main-form textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white; 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* biar waktu diisi atau dipaste warnanya gak berubah */
+.main-form input:focus,
+.main-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--coral-warning);
+}
+
+/* ini yang ngilangin efek putih waktu paste */
+.main-form input:-webkit-autofill,
+.main-form textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 9999s ease-in-out 0s;
 }

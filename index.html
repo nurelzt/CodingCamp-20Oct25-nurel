@@ -14,63 +14,69 @@
 </head>
 
 <body>
+    <div class="page-container">
 
     <!-- Header content-->
-    <header class="main-header p-[8px] flex justify-between items-center">
+    <header class="main-header p-2 flex justify-between items-center">
 
         <!-- Logo web-->
-        <div class="main-logo"></div>
+        <div class="main-logo">
+            <img src="images/logonurel.png" alt="Logo Nurel" class="w-32 h-32 object-contain rounded-full">
+        </div>
 
 
         <!-- Navigation menu-->
-         <nav class="flex gap-1">
+         <nav class="flex gap-2">
             <a class ="border rounded p-2" href="#home-section">Home</a>
             <a class ="border rounded p-2" href="#profile-section">Our Profile</a>
             <a class ="border rounded p-2" href="#portfolio-section">Portfolio</a>
             <a class ="border rounded p-2" href="#message-section">Message Us</a>
          </nav>
-
     </header>
 
-<hr/>
 
     <!-- Main content-->
     <main>
         <!-- Home -->
-        <section id="home-section" class="hero-section p=4 min-h-[500px]">
+        <section id="home-section" class="hero-section py-8">
             <h1 class="text-2xl font-bold mb-4"><span id="greet-name"></span>Welcome to My Portfolio Website</h1>
-            <p class="text-lg">Hello! I'm Nurul Izzati, and this is my portfolio website where I showcase my projects and skills.</p>
+            <p class="text-lg">
+                <p>Aku percaya laut bukan hanya tempat hidup biota, namun juga sebagai ruang inspirasi.</p>
+                <p>Kenalin aku Nurel, seorang fresh graduate dari program studi Ilmu Kelautan. 
+                <p>Yuk kepoin perjalanan belajarku!</p>
         </section>
-
-    <hr/>  
 
         <!-- Our Profile -->
-        <section id="profile-section" class="profile-section p=4 min-h-[500px]">
-            <h2 class="text-2xl font-bold mb-4">Our Profile</h2>
-            <p class="text-lg">I am a passionate developer with experience in web development, specializing in creating responsive and user-friendly websites.</p>
+        <section id="profile-section" class="profile-section py-8">
+            <h2 class="text-2xl font-bold mb-6 text-left">Our Profile</h2>
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <img src="images/fotonurel.jpg" alt="Foto Nurel" class="w-36 h-36 rounded-full object-cover">
+                <div class="profile-text text-center md:text-left">
+                    <p>Kenalin nama aku Nurul Izzati, biasa dipanggil Nurel. Aku lulusan dari kampus Universitas Syiah Kuala, program studi Ilmu Kelautan.</p>
+                    <p>Senang mempelajari hal baru menjadi sebuah tantangan untukku dalam mengeksplore dunia lebih jauh. Aku ingin mengembangkan diri dalam bidang kelautan, rencana si mau jadi data analysis hehehe (doain ya). Aku juga punya mimpi untuk membuka lapangan kerja bagi teman-teman yang ingin mengembangkan diri bersama, tanpa memandang status sosial, karena semua orang berhak untuk mendapat kesempatan.</p>
+                    <p>Kesiapan diri seseorang tidak diukur dengan seberapa pintarnya mereka, tapi dengan seberapa yakinnya mereka untuk terus berusaha menggapai mimpinya. Gimana dengan kamu? Jika memiliki misi yang sama, ayo kita wujudkan. Tidak ada kata terlambat untuk kamu yang baru memulai!</p>
+                </div>
+            </div>
         </section>
 
-    <hr/>
-
         <!-- Portfolio -->
-        <section id="portfolio-section" class="portfolio-section p=4 min-h-[500px]">
+        <section id="portfolio-section" class="portfolio-section py-8">
             <h2 class="text-2xl font-bold mb-4">Portfolio</h2>
-            <p class="text-lg">Here are some of my recent projects:</p>
+            <p class="text-lg">Catatan perjalananku:</p>
             <ul class="list-disc list-inside mt-3">
-                <li>Project 1: E-commerce Website</li>
-                <li>Project 2: Personal Blog</li>
-                <li>Project 3: Portfolio Website</li>
+                <li>Pernah menjadi sekretaris divisi Adkesma Himpunan Mahasiswa Ilmu Kelautan</li>
+                <li>Pernah menjadi bagian dari komunitas International Food Festival 7th</li>
+                <li>Enumerator Pesisir dan Kawasan Wisata di Kawasan Konservasi TWAL Pulau Banyak dan PISISI Kabupaten Simeulue </li>
+                <li>Masih menjadi bagian dari komunitas Menggapai Cita</li>
+                <li>1st Winner category Essay Writing in Aceh International Sea Turtle Festival</li>
             </ul>
         </section>
 
-    <hr/>
-
         <!-- Message Us -->
-        <section id="message-section" class="message-section p=4 min-h-[500px]">
+        <section id="message-section" class="message-section py-8">
             <h2 class="text-2xl font-bold mb-4">Message Us</h2>
-            <p class="text-lg">Feel free to reach out to me for any inquiries or collaborations!</p>
 
-            <form>
+            <form class="main-form">
                 <label for="name" class="block mb-2">Name:</label>
                 <input type="text" id="name-input" name="name" class="border p-2  mb-4 w-full"/>
 
@@ -79,9 +85,11 @@
 
                 <label for="message" class="block mb-2">Message:</label>
                 <textarea id="message-input" name="message" class="border p-2 mb-4 w-full" rows="4" required></textarea>
+            
+                <!-- <input type="submit" value="Send Message"> -->
+                <input type="submit" value="Send Message" onclick="validateForm();" class="bg-blue-500 text-white p-2 rounded"></input>
             </form>
 
-                <button onclick="validateForm();" class="bg-blue-500 text-white p-2 rounded">Send Message</button>
         </section>
     </main>
 
@@ -90,7 +98,6 @@
         <div class="footer-content p-4 text-center">
             <p class="text-sm">&copy; 2025 Nurul Izzati. All rights reserved.</p>
         </div>
-
     </footer>
 
     <!--Java Script eksternal file-->
